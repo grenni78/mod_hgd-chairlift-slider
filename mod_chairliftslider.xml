@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6.0" client="site" method="upgrade">
+    <name>Chairlift Slider</name>
+    <author>Holger Genth ( https://holger-genth.de )</author>
+    <version>0.8.0</version>
+    <description>Ein Slider, bei dem Angaben zu einem Treppenlift sammelt und am Ende eine E-Mail mit den gesammelten Daten verschickt</description>
+    <files>
+        <filename>mod_chairliftslider.xml</filename>
+        <filename module="mod_chairliftslider">mod_chairliftslider.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>img</folder>
+    </files>
+	<media folder="media" destination="mod_chairliftslider">
+		<filename>bullet.svg</filename>
+		<filename>button.svg</filename>
+		<filename>button-pressed.svg</filename>
+		<filename>button-rev.svg</filename>
+		<filename>button-rev-pressed.svg</filename>
+		<filename>chairliftslider-newicons.png</filename>
+		<filename>check.svg</filename>
+		<filename>chevron.svg</filename>
+		<filename>style.css</filename>
+	</media>
+    <scriptfile>install.modchairliftslider.php</scriptfile>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+          <field
+                 name="email"
+                 type="email"
+                 default=""
+                 label="Empfänger E-Mail"
+                 description="E-Mailadresse, an die die Daten gesendet werden sollen" />
+       </fieldset>
+     </fields>
+    </config>
+</extension>
